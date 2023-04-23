@@ -30,6 +30,7 @@ int print_percent(va_list args);
 int handler(const char *format, va_list args, int *i);
 int print_binary(va_list args);
 int print_unsigned_int(va_list args);
+int print_oct(va_list args);
 
 
 #endif

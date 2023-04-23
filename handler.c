@@ -20,6 +20,7 @@ int handler(const char *format, va_list args, int *i)
 		{'s', print_string},
 		{'d', print_integer},
 		{'i', print_integer},
+		{'o', print_oct},
 		{'0', NULL}
 	};
 
