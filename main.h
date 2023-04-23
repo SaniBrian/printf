@@ -34,5 +34,6 @@ int print_oct(va_list args);
 int print_lower_hexa(va_list args);
 int print_upper_hexa(va_list args);
 void str_upper(char *str);
+int print_binary(va_list args);
 
 #endif
