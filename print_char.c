@@ -8,10 +8,11 @@
 
 int print_char(va_list args)
 {
-	int ch = va_arg(args, int);
+	char ch = va_arg(args, int);
 	
-	if (ch == NULL)
-		return (0);
-	_putchar(ch);
-	return (1);
+	if (ch != NULL)
+	{
+		_putchar(c);
+		return (1);
+	}
 }
