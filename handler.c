@@ -21,6 +21,7 @@ int handler(const char *format, va_list args, int *i)
 		{'d', print_integer},
 		{'i', print_integer},
 		{'o', print_oct},
+		{'x', print_lower_hexa},
 		{'0', NULL}
 	};
 
