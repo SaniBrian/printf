@@ -3,7 +3,6 @@
 
 #include <stdarg.h>
 
-#define UNUSED(x) (void)(x)
 
 /**MAIN FUNCTION PROTOTYPE*/
 int _printf(const char *format, ...);

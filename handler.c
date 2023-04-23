@@ -18,7 +18,6 @@ int handler(const char *format, va_list args, int *i)
 	formatter specifiers[] = {
 		{'c', print_char},
 		{'s', print_string},
-		{'%', print_percent},
 		{'d', print_integer},
 		{'i', print_integer},
 		{'0', NULL}
@@ -30,6 +29,11 @@ int handler(const char *format, va_list args, int *i)
 	*i = *i + 1;
 	if (format[*i] == '\0')
 		return (-1);
+	if (format[*i] == '%')
+	{
+		_putchar('%');
+		return (1);
+	}
 
 	for (j = 0; specifiers[j].type != '0'; j++)
 	{
