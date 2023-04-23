@@ -23,6 +23,7 @@ typedef struct specifier
 /**FUNCTION PROTOTYPES*/
 int _putchar(char c);
 char *num_base(long int n, int n_base);
+char *hexa_num_base(unsigned long n, int n_base);
 int print_integer(va_list args);
 int print_string(va_list args);
 int print_char(va_list args);

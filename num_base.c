@@ -12,7 +12,7 @@ char *num_base(long int n, int n_base)
 	static char *chars = "0123456789abcdef";
 	static char buf[50];
 	char *str, sign = 0;
-	unsigned long num;
+	long int num;
 
 	if (n < 0)
 	{
