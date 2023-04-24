@@ -1,23 +1,38 @@
 #include "main.h"
-
 /**
-*hexa_num_base - converts integer to base n_base
-*@n: number
-*@n_base: base to convert to
-*Return: char
+*hexa_num_base - converts int to hexadecimal
+*@num: int to convert
+*@ch: lower or higher case determiner
 */
-
-char *hexa_num_base(unsigned long n, int n_base)
+char *hexa_num_base(unsigned long int num, char ch)
 {
-	static char *chars = "0123456789abcdef";
-	static char buf[50];
-	char *str;
+	static char buffer[9];
+	int i = 0, len;
+	char temp;
+	char alpha;
 
-	str = &buf[49];
-	*str = '\0';
+	if (ch == 'l')
+		alpha = 'a';
+	if (ch == 'u')
+		alpha = 'A';
 	do {
-		*--str = chars[n % n_base];
-		n /= n_base;
-	} while (n != 0);
-	return (str);
+		int digit = num % 16;
+		if (digit < 10)
+		{
+			buffer[i++] = '0' + digit;
+		} else
+		{
+			buffer[i++] = alpha + (digit - 10);
+		}
+		num = num / 16;
+	} while (num > 0);
+	buffer[i] = '\0';
+	len = i;
+	for (i = 0; i < (len / 2); i++)
+	{
+		temp = buffer[i];
+		buffer[i] = buffer[len - i - 1];
+		buffer[len - i - 1] = temp;
+	}
+	return (buffer);
 }

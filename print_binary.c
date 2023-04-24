@@ -11,14 +11,10 @@ int print_binary(va_list args)
 	char *str;
 	int size;
 
-	str = num_base(va_arg(args, int), 2);
-	if (str != NULL)
+	str = num_base(va_arg(args, unsigned int), 2);
+	for (size = 0; str[size] != '\0'; size++)
 	{
-		for (size = 0; str[size] != '\0'; size++)
-		{
-			_putchar(str[size]);
-		}
-		return (size);
+		_putchar(str[size]);
 	}
-	return (0);
+	return (size);
 }

@@ -9,11 +9,10 @@
 
 int print_lower_hexa(va_list args)
 {
-	unsigned int n = va_arg(args, unsigned int);
 	char *str, *ptr;
 	int size;
 
-	ptr = num_base(n, 16);
+	ptr = hexa_num_base(va_arg(args, unsigned long int), 'l');
 	if (ptr != NULL)
 	{
 		str = ptr;

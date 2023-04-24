@@ -20,6 +20,7 @@ int handler(const char *format, va_list args, int *i)
 		{'s', print_string},
 		{'d', print_integer},
 		{'i', print_integer},
+		{'u', print_unsigned_int},
 		{'o', print_oct},
 		{'b', print_binary},
 		{'x', print_lower_hexa},

@@ -9,14 +9,12 @@
 
 int print_upper_hexa(va_list args)
 {
-	unsigned int n = va_arg(args, unsigned int);
 	char *str, *ptr;
 	int size;
 
-	ptr = num_base(n, 16);
+	ptr = hexa_num_base(va_arg(args, unsigned long int), 'u');
 	if (ptr != NULL)
 	{
-		str_upper(ptr);
 		str = ptr;
 	} else
 	{
@@ -27,22 +25,4 @@ int print_upper_hexa(va_list args)
 		_putchar(str[size]);
 	}
 	return (size);
-}
-
-/**
- *str_upper - converts lowercase to uppercase
- *@str: pointer argument
- *Return: void
- */
-void str_upper(char *str)
-{
-	int i;
-
-	for (i = 0; str[i] != '\0'; i++)
-	{
-		if (str[i] >= 'a' && str[i] <= 'z')
-		{
-			str[i] = str[i] - 32;
-		}
-	}
 }
