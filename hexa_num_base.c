@@ -3,11 +3,12 @@
 *hexa_num_base - converts int to hexadecimal
 *@num: int to convert
 *@ch: lower or higher case determiner
+*Return: string pointer
 */
 char *hexa_num_base(unsigned long int num, char ch)
 {
 	static char buffer[9];
-	int i = 0, len;
+	int i = 0, len, digit;
 	char temp;
 	char alpha;
 
@@ -16,7 +17,7 @@ char *hexa_num_base(unsigned long int num, char ch)
 	if (ch == 'u')
 		alpha = 'A';
 	do {
-		int digit = num % 16;
+		digit = num % 16;
 		if (digit < 10)
 		{
 			buffer[i++] = '0' + digit;

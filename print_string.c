@@ -4,7 +4,6 @@
 *print_string - prints string specifier
 *@args: current argument
 *Return: print size
-*
 */
 
 int print_string(va_list args)
