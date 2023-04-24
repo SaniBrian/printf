@@ -21,7 +21,7 @@ int print_address(va_list args)
 	}
 	else
 	{
-		ptr_ = "NULL";
+		ptr_ = "(nil)";
 	}
 	for (size = 0; ptr_[size] != '\0'; size++)
 	{
