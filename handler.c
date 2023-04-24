@@ -24,6 +24,7 @@ int handler(const char *format, va_list args, int *i)
 		{'b', print_binary},
 		{'x', print_lower_hexa},
 		{'X', print_upper_hexa},
+		{'p', print_address},
 		{'0', NULL}
 	};
 
