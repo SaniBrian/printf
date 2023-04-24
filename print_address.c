@@ -9,7 +9,7 @@ int print_address(va_list args)
 {
 	void *ptr = va_arg(args, void *);
 	unsigned long int num = (unsigned long int) ptr;
-	char *str = hexa_num_base(num, 16);
+	char *str = hexa_num_base(num, 'l');
 
 	int size;
 
