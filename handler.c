@@ -25,6 +25,7 @@ int handler(const char *format, va_list args, int *i)
 		{'p', print_address},
 		{'r', print_reverse},
 		{'R', print_rot13},
+		{'S', print_non_printable},
 		{'0', NULL}
 	};
 	*i = *i + 1;
