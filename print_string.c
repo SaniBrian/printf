@@ -9,7 +9,7 @@
 int print_string(va_list args)
 {
 	char *ptr;
-	char nill[] = "(nil)";
+	char nill[] = "(null)";
 	int i;
 	int size;
 
@@ -20,7 +20,7 @@ int print_string(va_list args)
 		{
 			_putchar(nill[i]);
 		}
-		return (5);
+		return (6);
 	}
 	else
 	{
