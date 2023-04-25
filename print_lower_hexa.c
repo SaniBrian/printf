@@ -18,7 +18,7 @@ int print_lower_hexa(va_list args)
 		str = ptr;
 	} else
 	{
-		str = "NULL";
+		str = "(null)";
 	}
 	for (size = 0; str[size] != '\0'; size++)
 	{

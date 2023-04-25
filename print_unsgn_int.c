@@ -18,7 +18,7 @@ int print_unsigned_int(va_list args)
 		buf = str;
 	} else
 	{
-		buf = "NULL";
+		buf = "(null)";
 	}
 	for (size = 0; buf[size] != '\0'; size++)
 	{

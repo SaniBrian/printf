@@ -17,7 +17,7 @@ int print_oct(va_list args)
 		buffer = buff;
 	} else
 	{
-		buffer = "NULL";
+		buffer = "(null)";
 	}
 
 	for (size = 0; buffer[size] != '\0'; size++)
