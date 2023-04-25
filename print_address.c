@@ -7,28 +7,35 @@
  */
 int print_address(va_list args)
 {
-	void *ptr = va_arg(args, void *);
-	unsigned long int num = (unsigned long int) ptr;
-	char *str = hexa_num_base(num, 'l');
-	char *ptr_;
+	int size;
+	char *er = "(nil)";
+	char *str;
+
+	str = hexa_num_base(va_arg(args, unsigned long int), 'l');
+	if (str == NULL)
+	{
+		size = print_str(er);
+		return (size);
+	}
+
+	_putchar('0');
+	_putchar('x');
+	size = print_str(str);
+	return (size + 2);
+}
+
+/**
+*print_str - print string with _putchar
+*@str: string to print
+*Return: print size
+*/
+int print_str(char *str)
+{
 	int size;
 
-	if (str != NULL)
+	for (size = 0; str[size] != '\0'; size++)
 	{
-		ptr_ = str;
-		_putchar('0');
-		_putchar('x');
+		_putchar(str[size]);
 	}
-	else
-	{
-		ptr_ = "(nil)";
-	}
-	for (size = 0; ptr_[size] != '\0'; size++)
-	{
-		_putchar(ptr_[size]);
-	}
-	if (str != NULL)
-		return (size + 2);
-	else
-		return (size);
+	return (size);
 }

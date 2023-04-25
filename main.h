@@ -38,5 +38,6 @@ int print_address(va_list args);
 int print_reverse(va_list args);
 int print_rot13(va_list args);
 int print_non_printable(va_list args);
+int print_str(char *str);
 
 #endif
