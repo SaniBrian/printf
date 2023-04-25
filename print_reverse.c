@@ -9,7 +9,7 @@ int print_reverse(va_list args)
 {
 	char *ptr = va_arg(args, char*);
 	char temp;
-	int i,j, size;
+	int i, j, size;
 
 	if (ptr == NULL)
 	{
@@ -23,7 +23,7 @@ int print_reverse(va_list args)
 		ptr[i] = ptr[j];
 		ptr[j] = temp;
 	}
-	for ( i = 0; ptr[i] != '\0'; i++)
+	for (i = 0; ptr[i] != '\0'; i++)
 	{
 		_putchar(ptr[i]);
 	}
