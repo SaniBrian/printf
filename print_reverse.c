@@ -8,24 +8,21 @@
 int print_reverse(va_list args)
 {
 	char *ptr = va_arg(args, char*);
-	char temp;
-	int i, j, size;
+	char nill[] = "(llun)";
+	unsigned int i;
+	int j;
 
 	if (ptr == NULL)
 	{
-		ptr = "NULL";
+		for (i = 0; nill[i]; i++)
+			_putchar(nill[i]);
+		return (6);
 	}
-	for (size = 0; ptr[size] != '\0'; size++)
+	for (i = 0; ptr[i]; i++)
 		;
-	for (i = 0, j = size - 1; i < j; i++, j--)
+	for (j = i - 1; j >= 0; j--)
 	{
-		temp = ptr[i];
-		ptr[i] = ptr[j];
-		ptr[j] = temp;
+		_putchar(ptr[j]);
 	}
-	for (i = 0; ptr[i] != '\0'; i++)
-	{
-		_putchar(ptr[i]);
-	}
-	return (size);
+	return (i);
 }
