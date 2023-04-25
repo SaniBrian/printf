@@ -35,6 +35,6 @@ int print_oct(va_list args);
 int print_lower_hexa(va_list args);
 int print_upper_hexa(va_list args);
 int print_address(va_list args);
-
+int print_reverse(va_list args);
 
 #endif

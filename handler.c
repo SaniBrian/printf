@@ -23,6 +23,7 @@ int handler(const char *format, va_list args, int *i)
 		{'x', print_lower_hexa},
 		{'X', print_upper_hexa},
 		{'p', print_address},
+		{'r', print_reverse},
 		{'0', NULL}
 	};
 	*i = *i + 1;
