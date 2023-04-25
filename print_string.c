@@ -8,21 +8,26 @@
 
 int print_string(va_list args)
 {
-	char *str;
 	char *ptr;
+	char nill[] = "(nil)";
+	int i;
 	int size;
 
 	ptr = va_arg(args, char *);
-	if (ptr != NULL)
+	if (ptr == NULL)
 	{
-		str = ptr;
-	} else
-	{
-		str = "NULL";
+		for (i = 0; nill[i]; i++)
+		{
+			_putchar(nill[i]);
+		}
+		return (5);
 	}
-	for (size = 0; str[size] != '\0'; size++)
+	else
 	{
-		_putchar(str[size]);
+		for (size = 0; ptr[size] != '\0'; size++)
+		{
+			_putchar(ptr[size]);
+		}
+		return (size);
 	}
-	return (size);
 }
