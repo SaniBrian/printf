@@ -11,8 +11,9 @@ int print_unsigned_int(va_list args)
 	char *str;
 	char *buf;
 	int size;
+	unsigned int n = va_arg(args, unsigned int);
 
-	str = num_base(va_arg(args, unsigned int), 10);
+	str = num_base(n, 10);
 	if (str != NULL)
 	{
 		buf = str;
