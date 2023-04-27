@@ -40,6 +40,7 @@ int handler(const char *format, va_list args, int *i)
 			return (printed);
 		}
 	}
+	_putchar('%');
 	_putchar(format[*i]);
-	return (1);
+	return (2);
 }
